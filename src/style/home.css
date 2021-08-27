@@ -1,11 +1,12 @@
 body {
-  background-color: rgb(58, 58, 207);
+  background-color: rgb(17, 17, 19);
 }
 #body {
-  margin-left: 88px;
+  margin-left: 18px;
 }
 
 .posters {
   height: 220px;
+  width: auto;
   padding-bottom: 10px;
 }

@@ -24,26 +24,29 @@ export default class CardRow extends Component {
   render() {
     return (
       <Container>
-        
-        <h4>{this.props.rowTitle}</h4>
-        <Col className="justify-content-center mt-5"> 
-          {this.props.movies.map((movie) => (
-            <Col md={4} lg={2} key={movie.imdbID}>
-              <Card>
-                <Card.Img
-                  className="mb-1, bg-transparent posters"
-                  variant="top"
-                  src={movie.Poster}
 
-                />
-                <Card.Text className="p-1">{movie.Title}</Card.Text>
-              </Card>
-            </Col>
-          ))}
-        </Col>
-
+      {/* <h4>{this.props.rowTitle}</h4> */}
+      <Row className="mt-5"> 
+        {this.props.movies
         
-      </Container>
+        .slice(0,6)  
+        .map((movie) => (
+          <Col  key={movie.imdbID}>
+        
+              <Card.Img
+                className="mb-1, bg-transparent posters"
+                variant="top"
+                src={movie.Poster}
+
+              />
+              {/* <Card.Text className="p-1">{movie.Title}</Card.Text> */}
+        
+          </Col>
+        ))}
+      </Row>
+
+
+    </Container>
     );
   }
 }
