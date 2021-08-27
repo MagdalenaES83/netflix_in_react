@@ -1,5 +1,4 @@
 body {
-  background-color: rgb(19, 18, 18);
   color: aliceblue;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -12,15 +11,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-#searchedMovies
-  > div:nth-child(n)
-  > div
-  > div
-  > div.active.carousel-item
-  > div
-  > div:nth-child(n)
-  > div
-  > img {
-  height: 180px;
 }

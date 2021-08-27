@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Form } from "react-bootstrap";
 
-import CustomCarousel from "./CustomCarousel";
+import CardRow from "./CardRow";
 import "../style/home.css";
 
 class Home extends Component {
@@ -34,8 +34,6 @@ class Home extends Component {
     }
   };
 
- 
-
   componentDidMount = () => {
     this.fetchMovies("black mirror", "mirror");
     this.fetchMovies("lord of the rings", "lordOfTheRings");
@@ -43,17 +41,12 @@ class Home extends Component {
 
   render() {
     return (
-      <Container fluid id="search-area">
-        <Row className="pl-2 w-100 justify-content-between align-items-center">
-          <Col xm={12} sm={8} md={4} lg={2} className="d-flex"></Col>
-
-          <CustomCarousel rowTitle="Black Mirror" movies={this.state.mirror} />
-
-          <CustomCarousel
-            rowTitle="Lord Of the Rings"
-            movies={this.state.lordOfTheRings}
-          />
-        </Row>
+      <Container id="body">
+        <CardRow rowTitle="Black Mirror" movies={this.state.mirror} />
+        <CardRow
+          rowTitle="Lord Of the Rings"
+          movies={this.state.lordOfTheRings}
+        />
       </Container>
     );
   }
